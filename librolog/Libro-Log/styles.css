@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: 0;
+
+}
+.menu-container{
+    color:white;
+    background-color: teal;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.menu{
+    border: 1px solid teal;
+    width: 95%;
+    justify-content: space-between;
+    display: flex;
+    background-color: teal;
+}
+.links{
+    border: 1px solid teal;
+    display: flex;
+    justify-content: flex-end;
+}
+.login{
+    margin-left: 20px;
+}
