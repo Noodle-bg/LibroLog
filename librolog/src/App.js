@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Menu from './menu';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         </ul>
         </nav>
         <p>
-        <code></code>
+        <code>
+        <Menu/>
+        </code>
         </p>
       </header>
     </div>
