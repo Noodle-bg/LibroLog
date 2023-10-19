@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import Menu from './menu';
 import Newreleases from './Newreleases';
 import Footer from './Footer';
 import Bestsellers from './Bestsellers';
+import Seachabledropdown from './Searchabledropdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
+  
   return (
     <div className="App">
-      <header  >
+      <header className='header' >
         <nav className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Seachabledropdown/>
         <ul className="nav-items">
           <li><a href="#">Login</a></li>
           <li><a href="#">Signup</a></li>
@@ -22,7 +25,7 @@ function App() {
       <Newreleases/>
       {/* <Menu/> */}
       <Bestsellers/>
-      </code>
+      </code>s
       </p>
       <footer>
         <Footer/>
