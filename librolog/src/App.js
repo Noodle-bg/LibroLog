@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Menu from './menu';
+import Newreleases from './Newreleases';
+import Footer from './Footer';
+import Bestsellers from './Bestsellers';
 
 function App() {
   return (
@@ -13,12 +16,17 @@ function App() {
           <li><a href="#">Signup</a></li>
         </ul>
         </nav>
-        <p>
-        <code>
-        <Menu/>
-        </code>
-        </p>
       </header>
+      <p>
+      <code>
+      <Newreleases/>
+      {/* <Menu/> */}
+      <Bestsellers/>
+      </code>
+      </p>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: lavenderblush;
+  background-color: #EED971;
 }
 
 .App-logo {
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: teal;
+  background-color:#F05A28;
   font-size: large;
 }
 .nav-items{
@@ -20,9 +20,85 @@
 }
 
 .nav-items> li {
-  padding: 50px;
+  padding: 20px;
 }
 .nav-items >li >a{
   color: white;
   text-decoration: none;
+}
+::-webkit-scrollbar{
+  width:0px;
+}
+.scroll-container{
+  display: flex;
+  overflow-x:scroll;
+  width: 100%;
+  background-color: #E8EDF2;
+  border-radius: 0.5cm;
+}
+.card {
+  flex-shrink: 0;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin:5px;
+}
+.Footer{
+  background-color: darkgray;
+  height: 30px;
+  text-align: left;
+  color: white;
+}
+
+/* Topgrossing.css */
+.card-container {
+  margin: 20px;
+  transition: transform 0.3s; /* Add a transition for the transform property */
+  position: relative;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  background-color: #E8EDF2; /* Change the container background color */
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  transition: opacity 0.3s, transform 0.3s; /* Add a transition for opacity and transform properties */
+  opacity: 0;
+  transform: translateY(0); /* Initial position */
+}
+
+/* Add a hover effect */
+.card-container:hover .card {
+  transform: scale(1.05); /* Increase the size when hovering */
+}
+
+.card-container:hover .card-title {
+  opacity: 1; /* Show the title when hovering */
+  transform: translateY(-10px); /* Move the title down slightly on hover */
+}
+.headings{
+  text-align: left;
+  margin-left: 20px;
+  font-size: large;
 }
