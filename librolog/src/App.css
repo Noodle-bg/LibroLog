@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #EED971;
+  background-color: black;
 }
 
 .App-logo {
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#F05A28;
+  background-color:black;
   font-size: large;
 }
 .nav-items{
@@ -32,9 +32,11 @@
 .scroll-container{
   display: flex;
   overflow-x:scroll;
-  width: 100%;
-  background-color: #E8EDF2;
+  width: 77%;
+  background-color: black;
   border-radius: 0.5cm;
+  margin-left: 10%;
+
 }
 .card {
   flex-shrink: 0;
@@ -70,7 +72,7 @@
   background-position: center center;
   position: relative;
   overflow: hidden;
-  background-color: #E8EDF2; /* Change the container background color */
+  background-color:black /* Change the container background color */
 }
 
 .card-title {
@@ -101,13 +103,14 @@
   text-align: left;
   margin-left: 20px;
   font-size: large;
+  color: white;
 }
 .dropdown-search {
   position: relative;
 
   color: #333;
   cursor: default;
-  background-color:#F05A28;
+  background-color: black;
 }
 
 .dropdown-search .arrow {
@@ -139,7 +142,7 @@
   outline: none;
   padding: 8px 52px 8px 10px;
   transition: all 200ms ease;
-  background-color: #EED971;
+  background-color: lightgray;
   width: 100%;
 }
 
@@ -150,7 +153,7 @@
   box-sizing: border-box;
   margin-top: -1px;
   max-height: 200px;
-  background-color: #EED971;
+  background-color: lightgray;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow-y: auto;
@@ -189,4 +192,10 @@
 }
 .selected-value input{
   width:100%;
+}
+.logo-background{
+  background-color: blue;
+  height: 100px;
+  width: 190px;
+  display: flex;
 }

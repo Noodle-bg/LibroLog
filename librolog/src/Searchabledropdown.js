@@ -1,7 +1,6 @@
 import Searchbar from "./Searchbar";
 import { books } from "./books";
 import { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Seachabledropdown() {
   const [value, setValue] = useState("");

@@ -4,7 +4,6 @@ const books=[book1,book2,book1,book1,book2,book2,book1,book2,book1,book2];
 const Bestsellers = () => {
     return(
         <div>
-            <p className="headings">Current Best Sellers</p>
             <div className="scroll-container">
                 {books.map((src,index) => (
                 <a href="#" key={index} className="card-container">   <div key={src} className="card" style={{backgroundImage:`url(${src})`

@@ -5,33 +5,41 @@ import Footer from './Footer';
 import Bestsellers from './Bestsellers';
 import Seachabledropdown from './Searchabledropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Bestsellerswithbuttons from './Bestsellerswithbuttons';
+import Newreleaseswithbuttons from './Newreleaseswithbuttons';
+
+
+// ... (previous code)
+
 
 function App() {
-  
   return (
     <div className="App">
-      <header className='header' >
+      <header className='header'>
         <nav className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Seachabledropdown/>
-        <ul className="nav-items">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Signup</a></li>
-        </ul>
+          <div className='logo-background'>
+            <img src={logo} className="App-logo" alt="logo" height="100px" />
+          </div>
+          <Seachabledropdown />
+          <ul className="nav-items">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+          </ul>
         </nav>
       </header>
       <p>
-      <code>
-      <Newreleases/>
-      {/* <Menu/> */}
-      <Bestsellers/>
-      </code>s
+        <code>
+          <Newreleaseswithbuttons/>
+          <Bestsellerswithbuttons/>
+        </code>
       </p>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </div>
   );
 }
 
 export default App;
+
+// ... (remaining code)
