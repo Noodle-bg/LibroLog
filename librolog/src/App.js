@@ -7,6 +7,11 @@ import Seachabledropdown from './Searchabledropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Bestsellerswithbuttons from './Bestsellerswithbuttons';
 import Newreleaseswithbuttons from './Newreleaseswithbuttons';
+import Dropdownmenu from './Dropdownmenu';
+import Menubar from './Menubar';
+import Youngreadersbutton from './Youngreadersbuttons';
+import Topauthors from './Topauthors';
+import Topauthorswithbuttons from './Topauthorswithbuttons';
 
 
 // ... (previous code)
@@ -24,13 +29,19 @@ function App() {
           <ul className="nav-items">
             <li><a href="#">Login</a></li>
             <li><a href="#">Signup</a></li>
+            <li><a href='#'>Dashboard</a></li>
           </ul>
         </nav>
+        <div>
+          <Menubar/>
+        </div>
       </header>
       <p>
         <code>
           <Newreleaseswithbuttons/>
           <Bestsellerswithbuttons/>
+          <Youngreadersbutton/>
+          <Topauthorswithbuttons/>
         </code>
       </p>
       <footer>

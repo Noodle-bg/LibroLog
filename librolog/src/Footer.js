@@ -4,7 +4,7 @@ function Footer(){
         <div>
             <footer className="Footer">
                 <small>
-                    Noodle-Dope Publications. All rights Reserved.
+                ©Noodle-Dope Private Limited. All rights Reserved.
                 </small>
             </footer>
         </div>
