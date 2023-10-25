@@ -1,0 +1,284 @@
+.App {
+  text-align: center;
+  background-color:black;
+}
+
+.App-logo {
+  width: 300px;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:black;
+  font-size: large;
+}
+.nav-items{
+  list-style: none;
+  display: flex;
+}
+
+.nav-items> li {
+  padding: 20px;
+}
+.nav-items >li >a{
+  color: white;
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  width:0px;
+}
+.scroll-container{
+  display: flex;
+  overflow-x:scroll;
+  width: 77%;
+  background-color: black;
+  border-radius: 0.5cm;
+  margin-left: 10%;
+
+}
+.card {
+  flex-shrink: 0;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin:5px;
+}
+.Footer{
+  background-color: darkgray;
+  height: 30px;
+  text-align: left;
+  color: white;
+}
+
+/* Topgrossing.css */
+.card-container {
+  margin: 20px;
+  transition: transform 0.3s; /* Add a transition for the transform property */
+  position: relative;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  background-color:black /* Change the container background color */
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  transition: opacity 0.3s, transform 0.3s; /* Add a transition for opacity and transform properties */
+  opacity: 0;
+  transform: translateY(0); /* Initial position */
+}
+
+/* Add a hover effect */
+.card-container:hover .card {
+  transform: scale(1.05); /* Increase the size when hovering */
+}
+
+.card-container:hover .card-title {
+  opacity: 1; /* Show the title when hovering */
+  transform: translateY(-10px); /* Move the title down slightly on hover */
+}
+.headings{
+  text-align: left;
+  margin-left: 20px;
+  font-size: large;
+  color: white;
+}
+.dropdown-search {
+  position: relative;
+
+  color: #333;
+  cursor: default;
+  background-color: black;
+}
+
+.dropdown-search .arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: " ";
+  display: block;
+  height: 0;
+  margin-top: 0.3rem;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 0;
+}
+
+.dropdown-search .arrow.open {
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+
+.dropdown-search .selected-value input {
+  line-height: 1.5;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: default;
+  outline: none;
+  padding: 8px 52px 8px 10px;
+  transition: all 200ms ease;
+  background-color: lightgray;
+  width: 100%;
+}
+
+.dropdown-search .options {
+  display: none;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  background-color: lightgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+.dropdown-search .options.open {
+  display: block;
+}
+
+.dropdown-search .option {
+  box-sizing: border-box;
+  color: rgba(51, 51, 51, 0.8);
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+
+.dropdown-search .option.selected,
+.dropdown-search .option:hover {
+  background-color: #f2f9fc;
+  color: #333;
+}
+.search-bar{
+  display: flex;
+  border-radius: 2px;
+  
+}
+.control{
+  width:500px;
+}
+.selected-value input{
+  width:100%;
+}
+.logo-background{
+  background-color: blue;
+  height: 100px;
+  width: 190px;
+  display: flex;
+}
+/* .tool-bar{
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+
+}
+.tool{
+  background-color: blue;
+}
+.tool-item{
+  list-style-type:none;
+} */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  justify-content: center;
+  display: flex;
+  border-radius: 30px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: red;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
