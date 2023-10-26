@@ -2,7 +2,7 @@ import Searchbar from "./Searchbar";
 import { books } from "./books";
 import { useState } from "react";
 
-export default function Seachabledropdown() {
+export default function Searchabledropdown() {
   const [value, setValue] = useState("");
 
   return (
