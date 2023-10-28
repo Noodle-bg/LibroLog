@@ -1,10 +1,9 @@
-import React from "react";
 import left from "./less_than.png";
 import right from "./greater_than1.png"
-import Topauthors from "./Topauthors";
+import Bestsellers from './Nonfction'
 const scrollAmount = 1000; // Adjust this value to control the croll distance
 function scrollContainerLeft() {
-  const container = document.querySelectorAll('.scroll-container')[3];
+  const container = document.querySelectorAll('.scroll-container')[1];
   container.scrollBy({
       left: -scrollAmount,
       behavior: 'smooth', // Add smooth scrolling behavior
@@ -12,22 +11,23 @@ function scrollContainerLeft() {
 }
 
 function scrollContainerRight() {
-  const container = document.querySelectorAll('.scroll-container')[3];
+  const container = document.querySelectorAll('.scroll-container')[1];
   container.scrollBy({
       left: scrollAmount,
       behavior: 'smooth', // Add smooth scrolling behavior
   });
 }
 
-  function Topauthorswithbuttons(){
+  function Bestsellerswithbuttons(){
+
     return (
         <div>
-            <p className="headings"><b>For Our Young Readers</b></p>
+            <p className="headings"><b>Non-Fiction</b></p>
             <div className="scroller-buttons">
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />
                 </button>
-                <Topauthors/>
+                <Bestsellers/>
                 <button onClick={scrollContainerRight} className="arrow-button">
                     <img src={right} className="arrow" alt="right" height="50px" />
                 </button>
@@ -36,4 +36,4 @@ function scrollContainerRight() {
     );
 }
 
-export default Topauthorswithbuttons;
+export default Bestsellerswithbuttons;

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color:black;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -32,10 +33,10 @@
 .scroll-container{
   display: flex;
   overflow-x:scroll;
-  width: 77%;
+  width: 100%;
   background-color: black;
   border-radius: 0.5cm;
-  margin-left: 10%;
+  margin-left: 0%;
 
 }
 .card {
@@ -64,8 +65,8 @@
 }
 
 .card {
-  width: 250px;
-  height: 350px;
+  width: 240px;
+  height: 340px;
   border-radius: 10px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,9 +109,9 @@
 .dropdown-search {
   position: relative;
 
-  color: #333;
+  color: white;
   cursor: default;
-  background-color: black;
+  background-color: #333;
 }
 
 .dropdown-search .arrow {
@@ -125,10 +126,11 @@
   right: 10px;
   top: 14px;
   width: 0;
+  background-color: #333;
 }
 
 .dropdown-search .arrow.open {
-  border-color: transparent transparent #999;
+  border-color: transparent transparent #333;
   border-width: 0 5px 5px;
 }
 
@@ -142,18 +144,20 @@
   outline: none;
   padding: 8px 52px 8px 10px;
   transition: all 200ms ease;
-  background-color: lightgray;
+  background-color: #333;
   width: 100%;
+  color: white;
 }
 
 .dropdown-search .options {
   display: none;
+
   border: 1px solid #ccc;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   margin-top: -1px;
   max-height: 200px;
-  background-color: lightgray;
+  background-color: #333;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow-y: auto;
@@ -161,20 +165,23 @@
   top: 100%;
   width: 100%;
   z-index: 1000;
+  color:white;
   -webkit-overflow-scrolling: touch;
 
 }
 
 .dropdown-search .options.open {
   display: block;
+  color: white;
 }
 
 .dropdown-search .option {
   box-sizing: border-box;
-  color: rgba(51, 51, 51, 0.8);
+  color: #333;
   cursor: pointer;
   display: block;
   padding: 8px 10px;
+  color: white;
 }
 
 .dropdown-search .option.selected,
@@ -381,4 +388,27 @@ body {
 .stats-cont{
   display: flex;
   justify-content: center;
+}
+.scroller-buttons{
+  display:flex;
+}
+.arrow{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.arrow-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.arrow {
+  transition: transform 0.2s; /* Add a smooth transition for the transform property */
+}
+
+.arrow-button:hover .arrow {
+  transform: scale(1.2); /* Increase the size when hovering */
 }

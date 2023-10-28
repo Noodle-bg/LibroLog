@@ -1,7 +1,7 @@
 import React from "react";
-import Newreleaseswithbuttons from "./Newreleaseswithbuttons";
-import Bestsellerswithbuttons from "./Bestsellerswithbuttons";
-import Youngreadersbutton from "./Youngreadersbuttons";
+import Newreleaseswithbuttons from "./Fictionwithbuttons";
+import Bestsellerswithbuttons from "./Nonfictionwithbuttons";
+import Youngreadersbutton from "./Youngadultswithbuttons";
 import Topauthorswithbuttons from "./Topauthorswithbuttons";
 import Searchabledropdown from "./Searchabledropdown";
 import logo from './logo.svg';
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Menubar from "./Menubar";
 function Home(){
     return(
+        <div>
         <header className="header">
         <nav className="App-header">
           <div className='logo-background'>
@@ -23,6 +24,7 @@ function Home(){
             <li><Link to="/dashboard">Dashboard</Link></li>
           </ul>
         </nav>
+      </header>
         <div>
           <Menubar/>
           {/* ... Add other components here */}
@@ -31,7 +33,7 @@ function Home(){
           <Youngreadersbutton/>
           <Topauthorswithbuttons/>
         </div>
-      </header>
+        </div>
     )
 }
 export default Home;

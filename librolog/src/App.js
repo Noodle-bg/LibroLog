@@ -12,7 +12,6 @@ function App() {
 
         <Routes>
           <Route path="/dashboard" element={<Dashboard/>} />
-          {/* Other routes for your existing pages/components */}
           <Route path='/' element={<Home/>}/>
         </Routes>
     </Router>
