@@ -1,10 +1,10 @@
 import React from "react";
 import left from "./less_than.png";
 import right from "./greater_than1.png"
-import Fiction from "./Fiction";
+import Business from "./Business";
 const scrollAmount = 700; // Adjust this value to control the croll distance
 function scrollContainerLeft() {
-  const container = document.querySelectorAll('.scroll-container')[0];
+  const container = document.querySelectorAll('.scroll-container')[3];
   container.scrollBy({
       left: -scrollAmount,
       behavior: 'smooth', 
@@ -12,22 +12,22 @@ function scrollContainerLeft() {
 }
 
 function scrollContainerRight() {
-  const container = document.querySelectorAll('.scroll-container')[0];
+  const container = document.querySelectorAll('.scroll-container')[3];
   container.scrollBy({
       left: scrollAmount,
       behavior: 'smooth', 
   });
 }
 
-  function Fictionwithbuttons(){
+  function Businesswithbuttons(){
     return (
         <div>
-            <p className="headings"><b>Fiction</b></p>
+            <p className="headings"><b>Business</b></p>
             <div className="scroller-buttons">
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />
                 </button>
-                <Fiction/>
+                <Business/>
                 <button onClick={scrollContainerRight} className="arrow-button">
                     <img src={right} className="arrow" alt="right" height="50px" />
                 </button>
@@ -36,4 +36,4 @@ function scrollContainerRight() {
     );
 }
 
-export default Fictionwithbuttons;
+export default Businesswithbuttons;

@@ -1,12 +1,13 @@
 import React from "react";
-import Newreleaseswithbuttons from "./Fictionwithbuttons";
-import Bestsellerswithbuttons from "./Nonfictionwithbuttons";
-import Youngreadersbutton from "./Youngadultswithbuttons";
 import Topauthorswithbuttons from "./Topauthorswithbuttons";
 import Searchabledropdown from "./Searchabledropdown";
 import logo from './logo.svg';
 import { Link } from "react-router-dom";
 import Menubar from "./Menubar";
+import Fictionwithbuttons from "./Fictionwithbuttons";
+import Nonfictionwithbuttons from "./Nonfictionwithbuttons";
+import Youngadultswithbuttons from "./Youngadultswithbuttons";
+import Businesswithbuttons from "./Buisnesswithbuttons";
 function Home(){
     return(
         <div>
@@ -28,9 +29,10 @@ function Home(){
         <div>
           <Menubar/>
           {/* ... Add other components here */}
-          <Newreleaseswithbuttons/>
-          <Bestsellerswithbuttons/>
-          <Youngreadersbutton/>
+          <Fictionwithbuttons/>
+          <Nonfictionwithbuttons/>
+          <Youngadultswithbuttons/>
+          <Businesswithbuttons/>
           <Topauthorswithbuttons/>
         </div>
         </div>
