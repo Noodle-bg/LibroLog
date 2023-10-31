@@ -1,6 +1,6 @@
 import left from "./less_than.png";
 import right from "./greater_than1.png"
-import Nonfiction from "./Nonfction";
+import Nonfiction from "./Nonfiction";
 const scrollAmount = 1000; // Adjust this value to control the croll distance
 function scrollContainerLeft() {
   const container = document.querySelectorAll('.scroll-container')[1];
@@ -18,7 +18,7 @@ function scrollContainerRight() {
   });
 }
 
-  function Nonfictionwithbuttons(){
+  function Nonfictionwithbuttons({bestsellersdata=[]}){
 
     return (
         <div>
@@ -27,7 +27,7 @@ function scrollContainerRight() {
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />
                 </button>
-                <Nonfiction/>
+                <Nonfiction bestsellersdata={bestsellersdata}/>
                 <button onClick={scrollContainerRight} className="arrow-button">
                     <img src={right} className="arrow" alt="right" height="50px" />
                 </button>

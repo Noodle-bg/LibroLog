@@ -2,7 +2,7 @@ import React from "react";
 import left from "./less_than.png";
 import right from "./greater_than1.png";
 import Youngadult from "./Youngadults";
-const scrollAmount = 700; // Adjust this value to control the croll distance
+const scrollAmount = 1000; // Adjust this value to control the croll distance
 function scrollContainerLeft() {
   const container = document.querySelectorAll('.scroll-container')[2];
   container.scrollBy({
@@ -19,7 +19,7 @@ function scrollContainerRight() {
   });
 }
 
-  function Youngadultswithbuttons(){
+  function Youngadultswithbuttons({bestsellersdata=[]}){
     return (
         <div>
             <p className="headings"><b>For Our Young-Adults</b></p>
@@ -27,7 +27,7 @@ function scrollContainerRight() {
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />
                 </button>
-                <Youngadult/>
+                <Youngadult bestsellersdata={bestsellersdata}/>
                 <button onClick={scrollContainerRight} className="arrow-button">
                     <img src={right} className="arrow" alt="right" height="50px" />
                 </button>

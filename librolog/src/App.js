@@ -2,10 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './Dashboard';
-import Footer from './Footer'; // Don't forget to import Footer
+import Footer from './Footer';
 import Home from './Home';
 import './App.css'
 function App() {
+  
   return (
       <div className="App">
     <Router>
