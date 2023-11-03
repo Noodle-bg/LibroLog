@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import Footer from './Footer';
 import Home from './Home';
 import './App.css'
+import Categorydisplay from './Categorydisplay'
 function App() {
   
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path='/' element={<Home/>}/>
+          <Route path='/catdisplay' element={<Categorydisplay/>} />
         </Routes>
     </Router>
         <footer>

@@ -22,7 +22,7 @@ function scrollContainerRight() {
   function Topauthorswithbuttons(){
     return (
         <div>
-            <p className="headings"><b>For Our Young Readers</b></p>
+            <p className="headings"><b>Top Authors</b></p>
             <div className="scroller-buttons">
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />

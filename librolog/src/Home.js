@@ -6,9 +6,9 @@ import Menubar from "./Menubar";
 import Fictionwithbuttons from "./Fictionwithbuttons";
 import Nonfictionwithbuttons from "./Nonfictionwithbuttons";
 import Youngadultswithbuttons from "./Youngadultswithbuttons";
-import Businesswithbuttons from "./Buisnesswithbuttons";
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
+import Topserieswithbuttons from "./Topserieswithbuttons";
 
 function Home(){
   const [bestsellers,setBooks]=useState([]);
@@ -51,7 +51,7 @@ function Home(){
           <Fictionwithbuttons bestsellersdata={bestsellers[0]?.books}/>
           <Nonfictionwithbuttons bestsellersdata={bestsellers[1]?.books}/>
           <Youngadultswithbuttons bestsellersdata={bestsellers[10]?.books}/>
-          <Businesswithbuttons bestsellersdata={bestsellers[13]?.books}/>
+          <Topserieswithbuttons bestsellersdata={bestsellers[9]?.books}/>
           <Topauthorswithbuttons/>
         </div>
         </div>
