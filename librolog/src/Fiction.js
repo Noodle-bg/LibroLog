@@ -6,7 +6,7 @@ const Fiction=({bestsellersdata})=>{
       {bestsellersdata.map((book,index)=>{
         return(
         <div className="card-container" key={index}>
-          <Link >
+          <Link>
           <div className="card" style={{ backgroundImage: `url(${book.book_image})` }}></div></Link>
           <div className="card-title">{book.title}</div>
 
