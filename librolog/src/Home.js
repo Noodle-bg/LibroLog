@@ -9,7 +9,6 @@ import Youngadultswithbuttons from "./Youngadultswithbuttons";
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
 import Topserieswithbuttons from "./Topserieswithbuttons";
-
 function Home(){
   const [bestsellers,setBooks]=useState([]);
   useEffect(()=>{
@@ -19,6 +18,7 @@ function Home(){
       const res = await axios.get(`https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=${apikey}`);
       if (res.data.results && res.data.results.lists && res.data.results.lists.length > 0) {
         setBooks(res.data.results.lists);
+
       } else {
         console.log("Data is missing or empty.");
       }

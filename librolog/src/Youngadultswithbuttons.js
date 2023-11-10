@@ -2,6 +2,8 @@ import React from "react";
 import left from "./less_than.png";
 import right from "./greater_than1.png";
 import Youngadult from "./Youngadults";
+import { Link } from "react-router-dom";
+import { usePage } from './PageContext';
 const scrollAmount = 1000; // Adjust this value to control the croll distance
 function scrollContainerLeft() {
   const container = document.querySelectorAll('.scroll-container')[2];
@@ -20,9 +22,16 @@ function scrollContainerRight() {
 }
 
   function Youngadultswithbuttons({bestsellersdata=[]}){
+    const { updatePage } = usePage();
+
+    const handleClick = () => {
+      // Set the string value you want to send to another page
+      const stringValue = 'fiction';
+      updatePage(stringValue);
+    };
     return (
         <div>
-            <p className="headings"><b>For Our Young-Adults</b></p>
+            <Link to='./catdisplay' onClick={handleClick}><p className="headings"><b>For Our Young-Adults</b></p></Link>
             <div className="scroller-buttons">
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />

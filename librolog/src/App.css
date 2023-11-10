@@ -412,3 +412,45 @@ body {
 .arrow-button:hover .arrow {
   transform: scale(1.2); /* Increase the size when hovering */
 }
+/* Add this to your CSS file */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card-content {
+  color: white;
+}
+
+/* Add this to your App.css file */
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-container-cat {
+  margin: 20px;
+  width: 200px; /* Adjust the width as needed */
+  text-align: center;
+  background-color: #999;
+  border-radius: 5px;
+}
+
+.card-cat {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+.card-title-cat {
+  margin-top: 10px;
+  color: white;
+}
+.card-container-cat:hover {
+  transform: scale(1.1); /* Increase the size when hovering */
+}
