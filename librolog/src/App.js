@@ -7,6 +7,7 @@ import Home from './Home';
 import './App.css'
 import Categorydisplay from './Categorydisplay'
 import { PageProvider } from './PageContext';
+import Searchdisplay from './Searchdisplay';
 function App() {
   
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path='/' element={<Home/>}/>
           <Route path='/catdisplay' element={<Categorydisplay />} />
+          <Route path='/search' element={<Searchdisplay/>}/>
         </Routes>
     </Router>
         <footer>

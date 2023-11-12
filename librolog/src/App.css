@@ -94,6 +94,7 @@
 /* Add a hover effect */
 .card-container:hover .card {
   transform: scale(1.05); /* Increase the size when hovering */
+  transition: transform 0.5s ease; 
 }
 
 .card-container:hover .card-title {
@@ -192,6 +193,7 @@
 .search-bar{
   display: flex;
   border-radius: 2px;
+  margin-left: 180px;
   
 }
 .control{
@@ -435,8 +437,10 @@ body {
   margin: 20px;
   width: 200px; /* Adjust the width as needed */
   text-align: center;
-  background-color: #999;
+  background-color: black;
   border-radius: 5px;
+  transition: transform 0.5s ease; 
+
 }
 
 .card-cat {

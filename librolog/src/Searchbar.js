@@ -1,82 +1,59 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";// Import useHistory from react-router-dom
+import { usePage } from './PageContext';
 
-const Searchbar = ({
-  options,
-  label,
-  id,
-  selectedVal,
-  handleChange
-}) => {
+const Searchbar = () => {
   const [query, setQuery] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
-
+  const { updatePage } = usePage(); // Assuming you have a context function to update the page
   const inputRef = useRef(null);
+  const navigate = useNavigate(); // Get the history object from react-router-dom
 
   useEffect(() => {
     document.addEventListener("click", toggle);
     return () => document.removeEventListener("click", toggle);
   }, []);
 
-  const selectOption = (option) => {
-    setQuery(() => "");
-    handleChange(option[label]);
-    setIsOpen((isOpen) => !isOpen);
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      // If you are using context API to update the page
+      updatePage(query);
+      navigate(`/search`);
+
+      // If you want to navigate using react-router-dom
+    }
   };
 
   function toggle(e) {
-    setIsOpen(e && e.target === inputRef.current);
+    if (inputRef.current && e.target === inputRef.current) {
+      return;
+    }
+
+    // You can handle other logic here when clicking outside the input
+
+    setQuery("");
   }
 
-  const getDisplayValue = () => {
-    if (query) return query;
-    if (selectedVal) return selectedVal;
-
-    return "";
-  };
-
-  const filter = (options) => {
-    return options.filter(
-      (option) => option[label].toLowerCase().indexOf(query.toLowerCase()) > -1
-    );
-  };
-
   return (
-    <div>
+    <div className="search-bar">
     <div className="dropdown-search">
       <div className="control">
         <div className="selected-value">
           <input
             ref={inputRef}
             type="text"
-            value={getDisplayValue()}
+            value={query}
             name="searchTerm"
             placeholder="Search For Books, Authors or ISBN's"
-            onChange={(e) => {
-              setQuery(e.target.value);
-              handleChange(null);
-            }}
+            onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
             onClick={toggle}
           />
         </div>
-        <div className={`arrow ${isOpen ? "open" : ""}`}></div>
       </div>
-
-      <div className={`options ${isOpen ? "open" : ""}`}>
-        {filter(options).map((option, index) => {
-          return (
-            <div
-              onClick={() => selectOption(option)}
-              className={`option ${
-                option[label] === selectedVal ? "selected" : ""
-              }`}
-              key={`${id}-${index}`}
-            >
-              {option[label]}
-            </div>
-          );
-        })}
-      </div>
-
     </div>
     </div>
   );

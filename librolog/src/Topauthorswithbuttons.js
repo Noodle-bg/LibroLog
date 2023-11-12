@@ -4,7 +4,7 @@ import right from "./greater_than1.png"
 import Topauthors from "./Topauthors";
 const scrollAmount = 1000; // Adjust this value to control the croll distance
 function scrollContainerLeft() {
-  const container = document.querySelectorAll('.scroll-container')[3];
+  const container = document.querySelectorAll('.scroll-container')[4];
   container.scrollBy({
       left: -scrollAmount,
       behavior: 'smooth', // Add smooth scrolling behavior
@@ -12,7 +12,7 @@ function scrollContainerLeft() {
 }
 
 function scrollContainerRight() {
-  const container = document.querySelectorAll('.scroll-container')[3];
+  const container = document.querySelectorAll('.scroll-container')[4];
   container.scrollBy({
       left: scrollAmount,
       behavior: 'smooth', // Add smooth scrolling behavior

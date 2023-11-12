@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Menubar(){
     return(
 <div className="navbar">
-  <a href="#home">Home</a>
+   <Link to='/'>Home</Link>
   <div className="dropdown">
     <button className="dropbtn">About
       <i className="fa fa-caret-down"></i>
