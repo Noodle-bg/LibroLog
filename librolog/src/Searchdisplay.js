@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import axios from "axios";
 import logo from './logo.svg';
 import "./App.css";
@@ -7,32 +7,33 @@ import Menubar from "./Menubar";
 import { usePage } from './PageContext';
 import Searchbar from "./Searchbar";
 
-const Categorydisplay = () => {
-  const [bestsellers, setBooks] = useState([]);
-  const { currentPage } = usePage();
-  const { updatePage } = usePage();
+const Searchdisplay = () => {
+    const [bestsellers, setBooks] = useState([]);
+    const { currentPage } = usePage();
+    const { updatePage } = usePage();
 
-  const handleClick = (isbn) => {
-    // Set the string value you want to send to another page
-    updatePage(isbn);
-  };
-
-  useEffect(() => {
-    const fetchBestsellers = async () => {
-      try {
-        const res = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=subject:${currentPage}&maxResults=30&fields=items(volumeInfo(title,authors,imageLinks,industryIdentifiers))`);
-        if (res.data.items && res.data.items.length > 0) {
-          setBooks(res.data.items);
-          console.log(res.data);
-        } else {
-          console.log("Data is missing or empty.");
-        }
-      } catch (error) {
-        console.error("Error fetching bestsellers:", error);
-      }
+    const handleClick = (isbn) => {
+      // Set the string value you want to send to another page
+      updatePage(isbn);
     };
-    fetchBestsellers();
-  }, [currentPage]);
+  
+    useEffect(() => {
+      const fetchBestsellers = async () => {
+        try {
+          const res = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${currentPage}&maxResults=30&fields=items(volumeInfo(title,authors,imageLinks,industryIdentifiers))`);
+          if (res.data.items && res.data.items.length > 0) {
+            setBooks(res.data.items);
+            console.log(res.data);
+          } else {
+            console.log("Data is missing or empty.");
+          }
+        } catch (error) {
+          console.error("Error fetching bestsellers:", error);
+        }
+      };
+      fetchBestsellers();
+    }, [currentPage]);
+  
 
   return (
     <div>
@@ -53,6 +54,7 @@ const Categorydisplay = () => {
       </header>
       <Menubar/>
       <p className="headings"><b>Showing Results for "{currentPage}"</b></p>
+
       <div className="book-grid">
         {bestsellers.map((book,index) => (
                   <div className="card-container-cat" key={index}>
@@ -68,4 +70,4 @@ const Categorydisplay = () => {
   );
 };
 
-export default Categorydisplay;
+export default Searchdisplay;

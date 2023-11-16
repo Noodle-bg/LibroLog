@@ -1,12 +1,14 @@
 import left from "./less_than.png";
 import right from "./greater_than1.png"
 import Nonfiction from "./Nonfiction";
-const scrollAmount = 1000; // Adjust this value to control the croll distance
+import { Link } from "react-router-dom";
+import { usePage } from './PageContext';
+const scrollAmount = 1000; 
 function scrollContainerLeft() {
   const container = document.querySelectorAll('.scroll-container')[1];
   container.scrollBy({
       left: -scrollAmount,
-      behavior: 'smooth', // Add smooth scrolling behavior
+      behavior: 'smooth',
   });
 }
 
@@ -14,15 +16,21 @@ function scrollContainerRight() {
   const container = document.querySelectorAll('.scroll-container')[1];
   container.scrollBy({
       left: scrollAmount,
-      behavior: 'smooth', // Add smooth scrolling behavior
+      behavior: 'smooth',
   });
 }
 
   function Nonfictionwithbuttons({bestsellersdata=[]}){
+    const { updatePage } = usePage();
+
+    const handleClick = () => {
+      const stringValue = 'nonfiction';
+      updatePage(stringValue);
+    };
 
     return (
         <div>
-            <p className="headings"><b>Non-Fiction</b></p>
+            <Link to='./catdisplay' onClick={handleClick}><p className="headings"><b>Non-Fiction</b></p></Link>
             <div className="scroller-buttons">
                 <button onClick={scrollContainerLeft} className="arrow-button">
                     <img src={left} className="arrow" alt="left" height="50px" />
