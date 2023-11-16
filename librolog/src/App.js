@@ -8,6 +8,7 @@ import './App.css'
 import Categorydisplay from './Categorydisplay'
 import { PageProvider } from './PageContext';
 import Searchdisplay from './Searchdisplay';
+import MainPage from './MainPage';
 function App() {
   
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/catdisplay' element={<Categorydisplay />} />
           <Route path='/search' element={<Searchdisplay/>}/>
+          <Route path='/book' element={<MainPage/>}/>
         </Routes>
     </Router>
         <footer>

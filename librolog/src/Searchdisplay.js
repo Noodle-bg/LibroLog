@@ -10,6 +10,12 @@ import Searchbar from "./Searchbar";
 const Searchdisplay = () => {
     const [bestsellers, setBooks] = useState([]);
     const { currentPage } = usePage();
+    const { updatePage } = usePage();
+
+    const handleClick = (isbn) => {
+      // Set the string value you want to send to another page
+      updatePage(isbn);
+    };
   
     useEffect(() => {
       const fetchBestsellers = async () => {
@@ -52,7 +58,7 @@ const Searchdisplay = () => {
       <div className="book-grid">
         {bestsellers.map((book,index) => (
                   <div className="card-container-cat" key={index}>
-                  <Link>
+                  <Link to='/book' onClick={()=>handleClick(book.volumeInfo.industryIdentifiers[1].identifier)}>
                   <div className="card-cat" style={{ backgroundImage: `url(${book.volumeInfo.imageLinks?.thumbnail})` }}></div></Link>
                   <div className="card-title-cat"><b>{book.volumeInfo.title}</b></div>
                   <div className="card-title-cat">{book.volumeInfo.authors&&book.volumeInfo.authors[0]}</div>
