@@ -458,3 +458,10 @@ body {
 .card-container-cat:hover {
   transform: scale(1.1); /* Increase the size when hovering */
 }
+.headings{
+  text-decoration: none;
+  margin-left: 30px;
+}
+.headings :hover{
+  color: red;
+}
